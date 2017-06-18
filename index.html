@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <script src="angular-1.4.8.min.js"></script>
+    <script src="Multiplication.js"></script>
+    <link rel="stylesheet" type="text/css" href="Multiplication.css" />
+
+    <title>Multiplication</title>
+</head>
+
+<body>
+    <div ng-app="multiply" ng-controller="multiplyController">
+
+        <p>Matrix Base: <select ng-model="matrixBase" ng-options="b.value as b.name for b in bases"></select></p>
+        <p>Matrix Size: <input ng-model="matrixSize">  (Display range 3~15)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>X</td>
+                    <td class="theader" ng-repeat="col in matrix">{{col[0]}}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in matrix">
+                    <td class="theader">{{row[0]}}</td>
+                    <td class="tbody tooltip" ng-repeat="elem in row" ng-style="setColor('{{matrix[0][$parent.$index]}}', '{{matrix[0][$index]}}')"
+                        ng-mouseover="mouseover($index, $parent.$index)">
+                        <div ng-model="tips" class="tooltiptext">{{tips}}</div>
+                        {{elem}}
+                    </td>
+                </tr>
+        </table>
+
+    </div>
+</body>
+
+</html> 

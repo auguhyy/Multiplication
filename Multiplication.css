@@ -1,0 +1,53 @@
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.theader {
+    border: 0;
+    background-color: grey;
+    font-weight: bold;
+}
+
+.tbody {
+    border: solid 1px black;
+}
+
+.tgrey {
+    background: grey;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: yellow;
+    color: red;
+    text-align: center;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

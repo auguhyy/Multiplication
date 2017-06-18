@@ -5,3 +5,6 @@
 3. Add a URL parameter matrix_size (or GUI control) that selects the value (default =10) between 3 to 15 and refresh the page to show the relevant table. 
 4. Add a URL parameter matrix_base (or GUI control) which has three options (decimal, binary, hex), so the user can decide in which format he will see the table. Once selected the table is refreshed with the relevant values. 
 5. Color the background of the Prime numbers. 
+
+
+By: angular-1.4.8.min.js
